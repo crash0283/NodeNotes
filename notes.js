@@ -1,10 +1,24 @@
 console.log('starting notes.js');
-module.exports.addNote = () => {
-	console.log('add note');
-	return "New Note";
+
+var addNote = (title,body) => {
+	console.log('Adding note', title, body);
+};
+
+var getAll = () => {
+	console.log('Getting all notes');
+};
+
+var readNote = (title) => {
+	console.log("Title: ",title);
 }
 
-module.exports.add = (var1,var2) => {
-	var sum = var1 + var2;
-	return sum;
+var removeNote = (title) => {
+	console.log("Removing Title: ", title);
 }
+
+module.exports = {
+	addNote,
+	getAll,
+	readNote,
+	removeNote
+};
